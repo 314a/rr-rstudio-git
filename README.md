@@ -93,28 +93,13 @@ git push origin master
 git push --all
 ```
 
+Note: In case push/pull is greyed out in R [stackoverflow](http://stackoverflow.com/questions/10298291/cannot-push-to-github-keeps-saying-need-merge
+) use `git push -f origin master` and then `git push -u origin master`.
 
-## Check code..
-remove the remote "origin" repository (origin is rather a convention than a command)
-> git remote rm origin
+Note 2: Use `git remote rm origin` and `git remote rm upstream` if you want to remove the remote location from the current git folder. (origin is rather a convention than a command)
 
-add new repository 
-> git remote add origin https://github.com/314a/rr-rstudio-git-mine.git
-> git push -u origin master
 
-now you can commit/push/pull your own project..!!
 
-but:
-http://stackoverflow.com/questions/10298291/cannot-push-to-github-keeps-saying-need-merge
-
-use:
-> git push -f origin master
-> git push -u origin master
-
-then push/pull should not be greyed out on rstudio again..
-
-but 
-https://landeco2point0.wordpress.com/2014/07/22/things-i-forget-pushpull-greyed-out-in-rstudio/
 
 ## Spell checking
 
