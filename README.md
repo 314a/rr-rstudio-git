@@ -20,7 +20,7 @@ Some reasons to use version control are:
 
 RStudio integrates support for git and svn, hence we are going to use the widely used combination _R + Git + RStudio_.
 
-## Installation and setup
+## Part 1: Installation and setup
 
 To get started you need the following software installed on your computer:
 
@@ -49,23 +49,52 @@ Tell RStudio where to find the Git installation
 
 ### Git setup
 
-Configure Git and set your _user name_ and _email_ (The email address you use to register on GitHub). You can directly open the Git prompt from within RStudio. This needs to be set only once.
+Configure Git and set your _user name_ and _email_ (The email address you used to register on GitHub). You can directly open the Git prompt from within RStudio. user name and email needs to be set only once.
 Go to _Tools > Shell_ to open the Git Shell to tell Git your username and GitHub email.
 
 ```
-git config --global user.name 'Jane Doe'
+git config --global user.name 'janedoe'
 git config --global user.email 'jane.doe@geo.uzh.ch'
 ```
 
 ![**Figure:** RStudio: Git Shell](figures/Rstudio-GitShell.png)
 
+## Part 2: Create a new RStudio project with Git
 
-## Some other stuff
-Commands to change repository "destination"
+There are two ways to create version control for a RStudio project. That is either to create a new project in a directory that is already under Git Version control or to create a new project based on a remote Git repository. 
 
-show current remote repository
-> git remote -v show
+1. **Create a new project from a folder under version control:** In this case you only need to create new RStudio project for that directory and version control is automatically enabled. Go to _File > New Project_, select create a new project from an _Existing Directory_ and create the project.
+2. **Create a new project based on a remote Git repository:** Select _File > New Project.._ and from the opening menu select to create a new project from _Version Control_, Choose Git, then provide the repository url (use the https link of the url if you want to avoid all the ssh trouble) from the the repository you want to clone and create the project.
 
+In this tutorial we create a project based on a remote repository. The repository we want to clone and use for our project is this one: https://github.com/314a/rr-rstudio-git . 
+
+Step 1. Open the website of that GitHub repository and copy the HTTPS link of the project: https://github.com/314a/rr-rstudio-git . You find the HTTPS link (`https://github.com/314a/rr-rstudio-git.git`) on the right side of the GitHub project page (see Figure) ![**Figure:** GitHub: Copy repository HTTPS link](figures/GitHub-copy-repo-https.png)
+
+Step 2. In RStudio Select _File > New Project.._, select _Version Control_, Choose _Git_, then provide the repository HTTPS link, select the R workspace folder and create the project. RStudio now copies (clones in Git terms) the content of the repository to your project folder. ![**Figure:** RStudio: Create a new Git project](figures/RStudio-clone-git-project.gif)
+
+## Part 3: Fork a repository or create an own repository from a cloned repository
+
+Forking a project allows you to clone a repository on server-side and make it the starting point of your own project. A _fork_ creates a personal copy of another repository. (See also the [Github Forking guide](https://guides.github.com/activities/forking/))
+
+![**Figure:** GitHub: Fork a repository](figures/GitHub-fork.png)
+
+You may already have a cloned project (like in this tutorial), or want to fork your own project (which Github interestingly doesn't provide the options to do so). In this case you need to clone the project and push it to a new repository you have created.
+
+Step 1. Create a new GitHub repository and copy the HTTPS url of the new repository. ![**Figure:** GitHub: Create a new repository](figures/GitHub-create-repo.png) 
+
+Step 2. Open the Git shell from RStudio _Tools > Shell.._ and type the following commands to change the url of the remote repository of the current project from `https://github.com/314a/rr-rstudio-git` to the new url e.g. `https://github.com/janedoe/rr-rstudio-git-mine.git`.
+
+Type `git remote -v show` to show current remote repository to very the location of the current repository.
+
+```
+git remote set-url origin https://github.com/janedoe/rr-rstudio-git-mine.git
+git remote add upstream https://github.com/janedoe/rr-rstudio-git-mine.git
+git push origin master
+git push --all
+```
+
+
+## Check code..
 remove the remote "origin" repository (origin is rather a convention than a command)
 > git remote rm origin
 
