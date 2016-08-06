@@ -76,7 +76,7 @@ Step 2. In RStudio Select _File > New Project.._, select _Version Control_, Choo
 
 Forking a project allows you to clone a repository on server-side and make it the starting point of your own project. A _fork_ creates a personal copy of another repository. (See also the [Github Forking guide](https://guides.github.com/activities/forking/))
 
-![**Figure:** GitHub: Fork a repository](figures/GitHub-fork.png)
+![**Figure:** GitHub: Fork a repository](figures/GitHub-fork-repo.png)
 
 You may already have a cloned project (like in this tutorial), or want to fork your own project (which Github interestingly doesn't provide the options to do so). In this case you need to clone the project and push it to a new repository you have created.
 
