@@ -11,9 +11,9 @@ R in combination with the distributed version control system _Git_ provides a co
 Some reasons to use version control are:
 
 * It makes sharing of your projects _easy_ (once it's setup, you'll get there)
-* It facilitates collaboration. People can contribute to your project and vis-versa. Also you can report errors (bugs) or suggest new additions (features).
+* It facilitates collaboration. People can contribute to your project and vis-versa. Also you can report errors (bugs) or suggest new additions (features) to projects.
 * You can revert back to a previous version, if you find errors or accidently deleted something.
-* You can _see_ what changes between different version of your code, analysis or written text!
+* You can _see_ what changes between different versions of your code, analysis or written text!
 * In R it makes sharing of your packages easy. And you can install development packages of others with two lines of code. `install.packages("devtools"); devtools::install_github("username/packagename")` (Development of R packages is more advanced in R, but is a well structured well to keep your projects tidy see: [R Packages by Hadley Wickahm](http://r-pkgs.had.co.nz/))
 
 [Github](https://github.com/) is a user-friendly webservice that allows you to store your project repository remotely. Alternatives are [gitlab](https://about.gitlab.com/) and [bitbucket](https://bitbucket.org/).
