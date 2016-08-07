@@ -128,6 +128,7 @@ Forking a project allows you to clone a repository on server-side and make it th
 2. Copy the HTTPS repository url `https://github.com/yourusername/rr-rstudio-git.git` from your forked repository (see Figure 4)
 3. Create a new RStudio project with Git version control (as you have already done in part 2 of this tutorial)
 
+> This forked repository will serve as a basis for the next tutorial **publication writing in R** https://github.com/314a/rr-rstudio-git.
 
 ## Advanced: Link a local repository to a remote repository (TODO check!!)
 
