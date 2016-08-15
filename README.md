@@ -145,7 +145,7 @@ git push --all
 
 **Note 2:** Use `git remote rm origin` and `git remote rm upstream` if you want to remove the remote location from the current git folder. (origin is rather a convention than a command)
 
-# Tutorial 2: Writing publications with R
+# Tutorial 2: Writing publications with R (Work in progress!)
 
 This tutorial in the context of the **Reproducible Research Workshop** provides you with the first steps on how to write publications in R.
 
@@ -155,6 +155,105 @@ This tutorial in the context of the **Reproducible Research Workshop** provides 
 * Load a template project to RStudio (or Fork it from GitHub, see part 4 of the previous tutorial )
 * Generate an example report as an HTML, Word or Latex document
 * Prepare a publications to use in overleaf
+
+## Report generation
+
+R - with the help of some tools - enables you to automatically generate reports from your analysis.
+
+: R report generation
+
+---------------------- ---------------------------------------------------------------
+**RMarkdown:**         Convenient to produce reproducible documents. It allows to combine your text content and code in one single file. Good for version control.
+**Markdown:**          Simple markup language, fast to write and easy to read, lacks fancy formating options (needed?)
+**knitr:**             R package for dynamic report generation in R 
+**Pandoc:**            Universal document converter, pandoc is your swiss army-knife to render documents from one markup language into another.
+---------------------- ---------------------------------------------------------------
+
+
+## Report generation workflow
+
+
+Statistical **report** creation with RMarkdown + knitr + pandoc in various formats
+
+1. Create an .Rmd file (Markdown with R code snippets)
+2. Write your report and include your data, code, analysis and text
+3. Use knitr to create a markdown file
+4. Convert the files with pandoc to generate html (can be self-contained), doc, Word documents
+
+In RStudio the **knit button** combines steps 3+4 behind the scene to compile the documents from the RMarkdown file.
+
+![RStudio process](figures/processRStudio.png)
+
+## RMarkdown + RStudio 
+
+
+RStudio:    
+Simply go to **File -> New File -> R Markdown...**    
+and select in the opening interface **"Document"**.
+
+Note: For PDF generation you need an installed latex environment (e.g. [Miktex ](http://miktex.org/))
+
+![R Markdown File](figures/RMarkdownNewFile.png)
+
+## RMarkdown 
+
+RMarkown file consists of a **YAML Metadata** block, **Markdown** text elements and **R Code chunks**.
+
+![R Markdown](figures/RMarkdown.png)
+
+## Create and structure an R project 
+
+---------------------- ---------------------------------------------------------------
+**Folder structure:**  What structure might be useful?
+**Data organisation:** How do you organise your (raw/derived) data? 
+**Documentation:**     What do you document? Will you be reusing the data? Difficult parts, will you remember how you did it?
+**Scope:**             What's the scope of the project?
+**Report:**            Report structure
+**Reusability:**       Which functionalities will you reuse?
+**Extendable:**        What if the project becomes larger?
+---------------------- ---------------------------------------------------------------
+
+## Example folder structure 
+
+--------------------- -----------------------------------------
+**R**                 R folder storing all the *.r* code files
+**data**              Data folder with the raw and the derived data (e.g. data.csv, data.RData)
+**figures**           Figure folder (e.g. pictures, logo etc.)
+*myproject.RProj*     RStudio project file
+*ProjectReport.Rmd*   RMarkdown storing the report text and R analysis code
+*ProjectReport.pdf*   Generated report from the RMarkdown file
+*Readme.txt*          Information about the project. *(good practice)*
+--------------------- -----------------------------------------
+
+    
+This project folder:     
+![project folder](figures/projectfolder.png)
+
+## Workflow 
+
+Structure your project into the following steps:
+
+1. Data collection 
+2. Preprocessing
+3. Analysis
+4. Presentation 
+
+## Practical tips
+
+
+1. Create an RStudio project for every project in a separate folder 
+2. Document everything, your documents should be understandable by someone other than you
+3. Plan your project, organise and store your data, code and reports
+4. Start small, with a subset of your data
+5. Link your workflow (e.g. data files as an input to your analysis files)
+
+
+## Cheatsheets
+
+- [RMarkdown](http://shiny.rstudio.com/articles/rm-cheatsheet.html) https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+- [RMarkdown 2](http://www.utstat.toronto.edu/reid/sta2201s/rmarkdown-reference.pdf)
+
+
 
 
 # Further reading
