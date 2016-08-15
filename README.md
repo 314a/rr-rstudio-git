@@ -2,16 +2,16 @@
 
 # Tutorial 1: How to use Git with R and RStudio
 
-This tutorial in the context of the **Reproducible Research Workshop** provides you with the first steps on how to use git with R and RStudio.
+This tutorial in the context of the **Reproducible Research Workshop** provides you with the first steps on how to use Git with R and RStudio.
 
-The repository provides you with a step by step tutorial, that you are reading right now and is at the same time the repository you _play_ with to create your first git project in R.
+The repository provides you with a step-by-step tutorial, which you are reading right now, and is at the same time the repository you _play_ with to create your first Git project in R.
 
 **Objectives of this tutorial:**
 
-* Setup and install Git 
-* Setup Git in RStudio
+* Set up and install Git 
+* Set up Git in RStudio
 * Create new Git project in RStudio
-* Clone/fork an existing project from Github
+* Clone/fork an existing project from GitHub
 * Make some commits to your own project.
 
 
@@ -22,30 +22,30 @@ R in combination with the distributed version control system _Git_ provides a co
 Some reasons to use version control are:
 
 * It makes sharing of your projects _easy_ (once it's setup, you'll get there)
-* It facilitates collaboration. People can contribute to your project and vis-versa. Also you can report errors (bugs) or suggest new additions (features) to projects.
+* It facilitates collaboration. People can contribute to your project and vice-versa. You can also report errors (bugs) or suggest new additions (features) to projects.
 * You can revert back to a previous version, if you find errors or accidently deleted something.
 * You can _see_ what changes between different versions of your code, analysis or written text!
-* In R it makes sharing of your packages easy. And you can install development packages of others with two lines of code. `install.packages("devtools"); devtools::install_github("username/packagename")` (Development of R packages is more advanced in R, but is a well structured well to keep your projects tidy see: [R Packages by Hadley Wickahm](http://r-pkgs.had.co.nz/))
+* In R it makes sharing of your packages easy. And you can install development packages of others with two lines of code. `install.packages("devtools"); devtools::install_github("username/packagename")` (Development of R packages is more advanced in R, but is a well-structured way to keep your projects tidy; see: [R Packages by Hadley Wickahm](http://r-pkgs.had.co.nz/))
 
-[Github](https://github.com/) is a user-friendly webservice that allows you to store your project repository remotely. Alternatives are [gitlab](https://about.gitlab.com/) and [bitbucket](https://bitbucket.org/).
+[GitHub](https://github.com/) is a user-friendly webservice that allows you to store your project repository remotely. Alternatives are [gitlab](https://about.gitlab.com/) and [bitbucket](https://bitbucket.org/).
 
 RStudio integrates support for git and svn, hence we are going to use the widely used combination _R + Git + RStudio_.
 
 ## Part 1: Installation and setup
 
-**1. Installation:** To get started you need the following software installed on your computer: [Git](https://git-scm.com) and if you you are new to R, then you also need to install [R](https://www.r-project.org) and [Rstudio](https://www.rstudio.com). Additionally you will also need a [Github](https://github.com/) account.
+**1. Installation:** To get started you need the following software installed on your computer: [Git](https://git-scm.com) and if you are new to R, then you also need to install [R](https://www.r-project.org) and [RStudio](https://www.rstudio.com). Additionally you will also need a [GitHub](https://github.com/) account.
 
-1. **Git ([Download Git](https://git-scm.com/downloads)):** Download and Install Git . 
+1. **Git ([Download Git](https://git-scm.com/downloads)):** Download and Install Git. 
    _Optional Git clients: [SourceTree](https://www.sourcetreeapp.com) or [GitHub Desktop](https://desktop.github.com)_.
 2. **R ([Download R](https://cloud.r-project.org)):** Download and Install R (if not already installed).
 3. **RStudio ([Download RStudio Desktop](https://www.rstudio.com/products/RStudio/#Desktop)):**  Download and Install RStudio (if not already installed) 
-4. **GitHub account**: On [Github](https://github.com/) create yourself a free GitHub account. _If you you are new to Git follow the 15 min [TryGit Tutorial](https://try.github.io) to get a quick introduction to Git._ 
+4. **GitHub account**: On [GitHub](https://github.com/) create yourself a free GitHub account. _If you are new to Git follow the 15 min [TryGit Tutorial](https://try.github.io) to get a quick introduction to Git._ 
 
 **2. Setup Git in RStudio:** Tell RStudio where to find the Git installation (see Figure 1).
 
 1. Open RStudio and go to _Tools > Global Options..._ click on _Git/SVN_ 
 2. **Check** _Enable version control interface for RStudio projects_
-3. **Set the path to the Git executable**, that you just installed. Open a shell, if you don't know where Git is installed.    
+3. **Set the path to the Git executable** that you just installed. Open a shell, if you don't know where Git is installed.    
    Windows: type `where git` and hit enter. The path should be something like: `C:/Program Files (x86)/Git/bin/git.exe`    
    Linux/OS X: type `which git` and hit enter. The path should be something like: `/usr/bin/git` 
 4. **Restart RStudio**, if it worked out you will find the Git icon on the top toolbar (see Figure 1).
@@ -67,19 +67,19 @@ git config --global user.email 'name@provider.com'
 
 There are three ways to create version control for a RStudio project.
 
-a) **Create a new project and create a local git repository:** Select _File > New Project.._, create a project from a _New Directory_ and check the option _Create a git repository_. In order to push to a remote repository later on you add that remote repository by using the Git shell. If you already know which online repository you want to use for your projects, option c) is more convenient.    
+a) **Create a new project and create a local Git repository:** Select _File > New Project.._, create a project from a _New Directory_ and check the option _Create a git repository_. In order to push to a remote repository later on you add that remote repository by using the Git shell. If you already know which online repository you want to use for your projects, option c) is more convenient.    
 
-b) **Create a new project from a folder under version control:** In this case you only need to create new RStudio project for that directory and version control is automatically enabled. Go to _File > New Project_, select create a new project from an _Existing Directory_ and create the project.    
+b) **Create a new project from a folder under version control:** In this case you only need to create a new RStudio project for that directory and version control is automatically enabled. Go to _File > New Project_, select create a new project from an _Existing Directory_ and create the project.    
 
 c) **Create a new project based on a remote Git repository:** Select _File > New Project.._ and from the opening menu select to create a new project from _Version Control_, Choose Git, then provide the repository url (use the https link of the url if you want to avoid all the ssh trouble) from the the repository you want to clone and create the project.
 
-In this tutorial we **create a project based on a remote GitHub repository** (c). Hence we first create a new repository on github and create our github project from that repository.  
+In this tutorial we **create a project based on a remote GitHub repository** (c). Hence we first create a new repository on GitHub and create our GitHub project from that repository.  
 
-**1. Create a new GitHub repository:** Login to your GitHub account and [create a new GitHub repository](https://github.com/new). Give your new repository a short and memmorable name e.g. `rstudio-git-test`, check the option to initialize this repository with a README and create the repository (see Figure 3).  
+**1. Create a new GitHub repository:** Login to your GitHub account and [create a new GitHub repository](https://github.com/new). Give your new repository a short and memorable name e.g. `rstudio-git-test`, check the option to initialize this repository with a README and create the repository (see Figure 3).  
 
 ![**Figure 3:** GitHub: Create a new repository](figures/GitHub-create-repo.png) 
 
-**2. Copy the repository HTTPS url:** To create a new Git based project in RStudio we need the repository url. You find the repository HTTPS url on the just created GitHub project page. There press the button _Clone or download_ and copy the HTTPS link of the project (see Figure 4). The link will be something like `https://github.com/yourusername/rstudio-git-test.git`. 
+**2. Copy the repository HTTPS url:** To create a new Git based project in RStudio, we need the repository url. You find the repository HTTPS url on the just created GitHub project page. There press the button _Clone or download_ and copy the HTTPS link of the project (see Figure 4). The link will be something like `https://github.com/yourusername/rstudio-git-test.git`. 
 
 ![**Figure 4:** GitHub: Copy repository HTTPS link](figures/GitHub-copy-repo-https.png)
 
@@ -102,7 +102,7 @@ In RStudio press the _Git_ icon and select _Commit.._ from Git menu (Ctrl+Alt+M)
 
 ![**Figure 6:** RStudio: Commit window](figures/RStudio-commit.png)   
 
-**3. Push to the remote repository:** To push the changes to the remote GitHub repository press the _Push_ button on the upper right corner of the commit window. You will be prompted to enter the username and password of your GitHub account, enter them and check on the GitHub page if the changes got pushed to your online repository on GitHub.
+**3. Push to the remote repository:** To push the changes to the remote GitHub repository press the _Push_ button on the upper right corner of the commit window. You will be prompted to enter the username and password of your GitHub account. Enter them and check on the GitHub page if the changes got pushed to your online repository on GitHub.
 
 Now that you successfully pushed your first edits to a remote repository, repeat the above steps with a further file or R script that you create and edit, such as for instance the one below.
 
@@ -154,7 +154,7 @@ This tutorial in the context of the **Reproducible Research Workshop** provides 
 * Install Miktex etc.
 * Load a template project to RStudio (or Fork it from GitHub, see part 4 of the previous tutorial )
 * Generate an example report as an HTML, Word or Latex document
-* Prepare a publications to use in overleaf
+* Prepare a publication to use in Overleaf
 
 ## Report generation
 
