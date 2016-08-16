@@ -204,25 +204,25 @@ RMarkown file consists of a **YAML Metadata** block, **Markdown** text elements 
 ## Create and structure an R project 
 
 ---------------------- ---------------------------------------------------------------
-**Folder structure:**  What structure might be useful?
-**Data organisation:** How do you organise your (raw/derived) data? 
-**Documentation:**     What do you document? Will you be reusing the data? Difficult parts, will you remember how you did it?
-**Scope:**             What's the scope of the project?
-**Report:**            Report structure
-**Reusability:**       Which functionalities will you reuse?
-**Extendable:**        What if the project becomes larger?
+**Folder structure:**  What structure might be useful?  
+**Data organisation:** How do you organise your (raw/derived) data?  
+**Documentation:**     What do you document? Will you be reusing the data? Difficult parts, will you remember how you did it?  
+**Scope:**             What's the scope of the project?  
+**Report:**            Report structure  
+**Reusability:**       Which functionalities will you reuse?  
+**Extendable:**        What if the project becomes larger?  
 ---------------------- ---------------------------------------------------------------
 
 ## Example folder structure 
 
 --------------------- -----------------------------------------
-**R**                 R folder storing all the *.r* code files
-**data**              Data folder with the raw and the derived data (e.g. data.csv, data.RData)
-**figures**           Figure folder (e.g. pictures, logo etc.)
-*myproject.RProj*     RStudio project file
-*ProjectReport.Rmd*   RMarkdown storing the report text and R analysis code
-*ProjectReport.pdf*   Generated report from the RMarkdown file
-*Readme.txt*          Information about the project. *(good practice)*
+**R**                 R folder storing all the *.r* code files  
+**data**              Data folder with the raw and the derived data (e.g. data.csv, data.RData)  
+**figures**           Figure folder (e.g. pictures, logo etc.)  
+*myproject.RProj*     RStudio project file  
+*ProjectReport.Rmd*   RMarkdown storing the report text and R analysis code  
+*ProjectReport.pdf*   Generated report from the RMarkdown file  
+*Readme.txt*          Information about the project. *(good practice)*  
 --------------------- -----------------------------------------
 
     
@@ -258,7 +258,7 @@ Structure your project into the following steps:
 
 # Further reading
 
-[1] L. Brundsdon, Chris; Comber, An Introduction to R for Spatial Analysis & Mapping. London: Sage Publications Ltd, 2015.    
+[1] C. Brunsdon, L. Comber, An Introduction to R for Spatial Analysis & Mapping. London: Sage Publications Ltd, 2015.    
 [2] J. Paulson, “Version Control with Git and SVN,” 2016. [Online]. Available: https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN.   
 [3] H. Wickham, “Git and GitHub,” R packages, 2015. [Online]. Available: http://r-pkgs.had.co.nz/git.html.    
 [4] www.codeschool.com, “tryGit Tutorial.” [Online]. Available: https://try.github.io.
