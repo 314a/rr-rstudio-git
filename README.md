@@ -50,7 +50,10 @@ RStudio integrates support for git and svn, hence we are going to use the widely
    Linux/OS X: type `which git` and hit enter. The path should be something like: `/usr/bin/git` 
 4. **Restart RStudio**, if it worked out you will find the Git icon on the top toolbar (see Figure 1).
 
-![**Figure 1:** RStudio: Global Options for Git/SVN](figures/RStudio-setup-git.png "Figure 1: RStudio: Global Options for Git/SVN")
+
+Troubleshooting Windows: If Git doesn't appear in the RStudio interface. Not always 'where git' in the shell seems to point to the right location (depends on your PC, choose one: `C:\Program Files\Git\bin\git.exe; C:\Program Files\Git\cmd` ). Search for the Git installation and add the Git Path to the Environmental variables in _Control Panel/System/Advanced System Settings/ Environment Variables_ --> _System Variables: Path_ --> Edit and pasted the  `C:\Program Files\Git\bin\git.exe` at the end. 
+
+[**Figure 1:** RStudio: Global Options for Git/SVN](figures/RStudio-setup-git.png "Figure 1: RStudio: Global Options for Git/SVN")
 
 
 **3. Setup Git**: Configure Git and set your _user name_ and _email_ (The email address you used to register on GitHub). You can directly open the Git prompt from within RStudio. User name and email needs to be set only once.
@@ -147,7 +150,7 @@ git push --all
 
 # Further reading
 
-[1] C. Brunsdon, L. Comber, An Introduction to R for Spatial Analysis & Mapping. London: Sage Publications Ltd, 2015.    
+[1] C. Brunsdon, L. Comber, An Introduction to R for Spatial Analysis & Mapping. London: Sage Publications Ltd, 2015.     
 [2] J. Paulson, “Version Control with Git and SVN,” 2016. [Online]. Available: https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN.   
 [3] H. Wickham, “Git and GitHub,” R packages, 2015. [Online]. Available: http://r-pkgs.had.co.nz/git.html.    
 [4] www.codeschool.com, “tryGit Tutorial.” [Online]. Available: https://try.github.io.
