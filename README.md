@@ -37,8 +37,8 @@ RStudio integrates support for git and svn, hence we are going to use the widely
 
 1. **Git** Installation
    + **Win:** Download and Install Git ([Download Git](https://git-scm.com/downloads))
-   + **OSX:**  Install the Xcode command line tools, that include Git. To invoke the XCode installation process on OSX, type "git --version" and "git config" in the osx shell. OSX will then ask you install the XCode developer command line tools. Another way to invoke the install procedure is: "xcode-select --install"
-   + _Optional Git clients: [SourceTree](https://www.sourcetreeapp.com).
+   + **OSX:** Install the Xcode command line tools, that include Git. To invoke the XCode installation process on OSX, type "git --version" and "git config" in the osx shell. OSX will then ask you install the XCode developer command line tools. Another way to invoke the install procedure is: "xcode-select --install"
+   + Optional Git clients: [SourceTree](https://www.sourcetreeapp.com).
 2. **R ([Download R](https://cloud.r-project.org)):** Download and Install R (if not already installed).
 3. **RStudio ([Download RStudio Desktop](https://www.rstudio.com/products/RStudio/#Desktop)):**  Download and Install RStudio (if not already installed) 
 4. **GitHub account**: On [GitHub](https://github.com/) create yourself a free GitHub account. _If you are new to Git follow the 15 min [TryGit Tutorial](https://try.github.io) to get a quick introduction to Git._ 
