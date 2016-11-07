@@ -124,7 +124,7 @@ Forking a project allows you to clone a repository on server-side and make it th
 **1. Fork a repository on GitHub:** Open https://github.com/314a/rr-r-publication and press the _fork_ icon  (in the upper right side of the project page) to fork this project to your own github account. On your GitHub page https://github.com/username the forked project should appear then in the list of your repositories.   
 ![**Figure 7:** GitHub: Fork a repository](figures/GitHub-fork-repo.png)
    
-**2. Copy the HTTPS repository url:** `https://github.com/yourusername/rr-r-publication.git` from _your_ forked repository (see Part 2 Step 2)
+**2. Copy the HTTPS repository url:** `https://github.com/yourusername/rr-r-publication.git` from _your_ forked repository (see Part 2 Step 2)     
 **3. Create a new RStudio project with Git** like you have already done in part 2 step 3 of this tutorial
 
 ## Advanced: Link to a (different) remote repository
