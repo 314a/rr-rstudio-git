@@ -109,6 +109,8 @@ In RStudio press the _Git_ icon and select _Commit.._ from Git menu (Ctrl+Alt+M)
 
 Now that you successfully pushed your first edits to a remote repository, repeat the above steps with a further file or R script that you create and edit, such as for instance the one below.
 
+**Troubleshooting:** On OSX you might get the following errror: `error: unable to read askpass response from 'rpostback-askpass'` when trying to push. Go to _Tools > Shell.._ and type the following: `git push -u origin master`. This should solve the problem. For more details see:[Happy Git and GitHub for the useR: 15.5 Push fail at the RStudio level](http://happygitwithr.com/troubleshooting.html#push-fail-at-the-rstudio-level)[](https://github.com/STAT545-UBC/Discussion/issues/93).
+
 ```R
 # Simple R file
 # R example data.frame "cars"
